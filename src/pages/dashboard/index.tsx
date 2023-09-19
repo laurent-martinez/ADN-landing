@@ -1,8 +1,8 @@
 import React from 'react';
-import BestSeller from '@/components/BestSeller';
+// import BestSeller from '@/components/BestSeller';
 import Categories from '@/components/Categories';
 import Hero from '@/components/Hero';
-import LiveSell from '@/components/LiveSell';
+// import LiveSell from '@/components/LiveSell';
 import Magazine from '@/components/Magazine';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -17,8 +17,8 @@ function Dashboard() {
         <Categories />
       </div>
       <main className="bg-[#EAEAE9]">
-        <BestSeller />
-        <LiveSell />
+        {/* <BestSeller />
+        <LiveSell /> */}
         <Magazine />
         <NewsLetter />
       </main>
