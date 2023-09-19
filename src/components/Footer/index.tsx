@@ -49,9 +49,9 @@ function Footer() {
         <p className="hover:text-primaryColor ease-linear duration-300 cursor-pointer">Mentions Légales</p>
         <p className="hover:text-primaryColor ease-linear duration-300 cursor-pointer">Support ADN Enchères</p>
       </div>
-      <div className=" p-3 bg-primaryColor text-darkTextColor flex justify-center w-full">
+      <div className=" p-3 bg-[#07172A] text-white flex justify-center w-full">
         © ADN Enchères- 2023 -
-        <a href="mailto:laurent@ac2000.net" className="text-white hover:text-secondaryColor  ml-1"> adn</a>
+        <a href="mailto:laurent@ac2000.net" className="text-primaryColor hover:text-secondaryColor  ml-1"> adn</a>
       </div>
     </footer>
   );

@@ -1,12 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
-import useFetchData, { Data } from '@/pages/api/UseFetchData';
+import useFetchData from '@/pages/api/UseFetchData';
 import Loader from '../Loader';
 
 function BestSeller() {
   const { data, loading, error } = useFetchData();
-  const imageData = data?.filter((item) => item.images.length > 0);
-  console.log('imagedata', imageData);
+  interface BestSell {
+    minEstimation: number;
+    maxEstimation: number;
+    designation: string;
+    date: string;
+    id: number;
+  }
   if (error) {
     return <p>Error fetching data.</p>;
   }
@@ -15,27 +20,15 @@ function BestSeller() {
     <div className="best-seller-container sm:px-24 mb-5">
       <p className="pt-6 px-4  my-5 text-3xl text-[#173C6A] font-poppins font-semibold">Les ventes en cours</p>
       <div className="best-seller overflow-x-auto  whitespace-nowrap px-4 pb-6 pt-0 relative">
-        {loading ? <Loader /> : data && data?.map((item : Data) => (
+        {loading ? <Loader /> : data && data?.map((item : BestSell) => (
           <div key={item.id} className="best-seller-card inline-block bg-white mr-6 group cursor-pointer relative rounded-t-lg shadow-xl">
             <div className="category-image relative rounded-t-lg">
               <Image width={32} height={32} alt="Heart" src="/heart-v2.svg" className="absolute top-2 right-2 z-50" />
               <div>
-                {item.images.length > 0 ? (
-                  <Image
-                    width={323}
-                    height={253}
-                    alt={`image${item.images[0].id}`}
-                    src={item.images[0].publicPath}
-                    key={item.images[0].id}
-                    className="w-full h-[253px] border-b-4 border-[#EAEAE9] rounded-t-lg"
-                  />
-                )
-                  : (
-                    <div className="bg-[#5EBB95] text-white h-[253px] w-full flex justify-center items-center rounded-t-lg">
-                      {' '}
-                      <Image alt="ADN brand logo" src="/logo_adn.svg" width={150} height={150} className="z-150 bg-white p-4" />
-                    </div>
-                  )}
+                <div className="bg-[#5EBB95] text-white h-[253px] w-full flex justify-center items-center rounded-t-lg">
+                  {' '}
+                  <Image alt="ADN brand logo" src="/logo_adn.svg" width={150} height={150} className="z-150 bg-white p-4" />
+                </div>
               </div>
               <div className="absolute inset-0 bg-[#FFFDD0] opacity-0 group-hover:opacity-40 transition-opacity ease-out duration-500" />
             </div>

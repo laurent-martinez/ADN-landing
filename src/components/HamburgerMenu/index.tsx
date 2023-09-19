@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 
-function HamburgerMenu({ isOpenBurger, onCloseBurger }: { isOpenburger: boolean; onCloseBurger: () => void }) {
+function HamburgerMenu({ isOpenBurger, onCloseBurger }:
+{ isOpenBurger: boolean; onCloseBurger: () => void }) {
   const closeModal = () => {
     onCloseBurger();
   };

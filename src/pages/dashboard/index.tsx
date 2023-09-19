@@ -7,7 +7,6 @@ import Magazine from '@/components/Magazine';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import NewsLetter from '@/components/NewsLetter';
-import HamburgerMenu from '@/components/HamburgerMenu';
 
 function Dashboard() {
   return (
@@ -19,7 +18,6 @@ function Dashboard() {
       </div>
       <main className="bg-[#EAEAE9]">
         <BestSeller />
-        <HamburgerMenu isOpen />
         <LiveSell />
         <Magazine />
         <NewsLetter />
