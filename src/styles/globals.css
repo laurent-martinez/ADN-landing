@@ -1,3 +1,114 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* Appliquer la police Poppins aux éléments souhaités */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+    .transform-glow {
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+    }
+
+    .hover\:glow:hover {
+      filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.9));
+    }
+
+    .nav-link-anchor {
+      padding: 10px;
+      white-space: nowrap;
+      padding: 25px 20px;
+      text-decoration: none;
+      position: relative;
+      color: #123c6b;
+      transition: all 0.3s linear;
+    }
+  
+    .nav-link-anchor:hover,
+    .nav-link-anchor.active {
+      color:#5EBB95;
+    }
+  
+    .bulb {
+      width: 8px;
+      height: 8px;
+      background: #5EBB95;
+      display: inline-block;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      margin-left: -4px;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: transform 0.5s cubic-bezier(0.61, 0, 0.405, 1.63);
+    }
+    .bulb-menu {
+      width: 15px;
+      height: 15px;
+      background: #5EBB95;
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      margin-top: 60px;
+      margin-left: -4px;
+      border-radius: 50%;
+    }
+    .nav-link-anchor.active .bulb {
+      transform: scale(1.25);
+    }
+
+    .card {
+      width: 216px;
+      height: 162px;
+    }
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel {
+      overflow-x: scroll;
+    }
+    .best-seller-card {
+      width: 344px;
+    }
+
+    .fontStroke {
+      -webkit-text-stroke: 3px white;
+      color: transparent;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 100%;
+    }
+
+
+    /* Remove default scrollbar styles */
+.best-seller::-webkit-scrollbar {
+  display: none;
+  width: 10%; /* Adjust the width as needed */
+}
+.best-seller::-webkit-scrollbar-track {
+  width: 10px;
+  height: 10px;
+}
+
+
+/* Track */
+.best-seller::-webkit-scrollbar-track {
+  background: #EAEAE9; /* Change the background color */
+}
+
+/* Handle */
+.best-seller::-webkit-scrollbar-thumb {
+  background: #5EBB95; /* Change the thumb color */
+  width: 8px; /* Adjust the width as needed */
+  height: 8px; /* Adjust the height as needed */
+}
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}

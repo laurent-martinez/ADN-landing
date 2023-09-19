@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Dashboard from './dashboard';
 
 export default function Home() {
   return (
@@ -10,9 +11,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="text-3xl font-bold underline text-red-400">
-        Hello world!
-      </h1>
+      <Dashboard />
     </>
   );
 }
