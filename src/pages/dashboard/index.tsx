@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import BestSeller from '@/components/BestSeller';
 import Categories from '@/components/Categories';
 import Hero from '@/components/Hero';
@@ -10,6 +10,8 @@ import NewsLetter from '@/components/NewsLetter';
 import HamburgerMenu from '@/components/HamburgerMenu';
 
 function Dashboard() {
+  const [isOpenBurger, setIsOpenBurger] = useState(false);
+
   return (
     <div className="dashboard overflow-hidden">
       <Navbar />
@@ -17,9 +19,9 @@ function Dashboard() {
       <div className="flex justify-center items-center">
         <Categories />
       </div>
-      <main className="bg-[#EAEAE9]">
+      <main className="sm:bg-[#EAEAE9]  bg-[#F2F2F2]">
         <BestSeller />
-        <HamburgerMenu isOpen />
+        <HamburgerMenu isOpenBurger={isOpenBurger} onCloseBurger={() => setIsOpenBurger(false)} />
         <LiveSell />
         <Magazine />
         <NewsLetter />

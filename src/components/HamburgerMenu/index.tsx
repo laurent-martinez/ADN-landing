@@ -1,7 +1,13 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-function HamburgerMenu({ isOpenBurger, onCloseBurger }: { isOpenburger: boolean; onCloseBurger: () => void }) {
+interface HamburgerMenuProps {
+  isOpenBurger: boolean;
+  onCloseBurger: () => void;
+}
+
+function HamburgerMenu({ isOpenBurger, onCloseBurger }: HamburgerMenuProps) {
   const closeModal = () => {
     onCloseBurger();
   };
@@ -16,19 +22,24 @@ function HamburgerMenu({ isOpenBurger, onCloseBurger }: { isOpenburger: boolean;
     >
       <div className="absolute inset-0 pointer-events-none flex" style={{ backgroundImage: 'url(\'/noise-light.png\')' }} />
       <div className="flex flex-col h-60 justify-between items-center text-white text-5xl font-bold gap-8 relative">
+        <Link href="/" className="burgerMenu-item hover:text-primaryColor ease-linear duration-250 font-bold flex flex-col group justify-center relative">
+          <Image src="/home-hamburger.svg" width={24} height={24} alt="home icon" className="w-[50px] h-[50px] text-white p-2 rounded-full border-2 border-white" />
+          {' '}
+          <span className="bulb-menu opacity-0 group-hover:opacity-100 text-center" />
+        </Link>
         <Link href="/Sell" className="burgerMenu-item hover:text-primaryColor ease-linear duration-250 font-semibold flex flex-col group justify-center relative">
           Vendre
           {' '}
           <span className="bulb-menu opacity-0 group-hover:opacity-100 text-center" />
           {' '}
         </Link>
-        <Link href="/" className="burgerMenu-item hover:text-primaryColor ease-linear duration-250 font-bold flex flex-col group justify-center relative">
-          Home
+        <Link href="/Contact" className="burgerMenu-item hover:text-primaryColor ease-linear duration-250 font-bold flex flex-col group justify-center relative">
+          Contact
           {' '}
           <span className="bulb-menu opacity-0 group-hover:opacity-100 text-center" />
         </Link>
         <Link href="/Contact" className="burgerMenu-item hover:text-primaryColor ease-linear duration-250 font-bold flex flex-col group justify-center relative">
-          Contact
+          Inscription
           {' '}
           <span className="bulb-menu opacity-0 group-hover:opacity-100 text-center" />
         </Link>

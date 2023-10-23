@@ -18,10 +18,10 @@ const loaderVariants = {
 function Loader() {
   return (
     <div className="h-full w-full flex justify-center items-center">
-      <div className="flex items-center">
-        <p className="text-3xl text-[#173C6A] font-semibold text-center mx-auto">Chargement..</p>
+      <div className="flex items-center justify-center">
+        <p className="text-xl sm:text-3xl text-white sm:text-[#173C6A] font-semibold text-center mx-auto">Chargement..</p>
         <motion.div
-          className="w-[10px] h-[10px] bg-[#173C6A] rounded-full mx-auto my-[40px]"
+          className="sm:w-[10px] sm:h-[10px] w-[5px] h-[5px] bg-white sm:bg-[#173C6A] rounded-full mx-auto my-[40px]"
           variants={loaderVariants}
           animate="animationOne"
         />

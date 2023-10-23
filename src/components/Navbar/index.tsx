@@ -29,7 +29,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between items-center w-full h-[90px] z-10 px-6 text-[#123c6b] shadow-lg sm:shadow-none">
+    <nav className="flex justify-between items-center w-full h-[90px] z-10 px-6 text-[#123c6b]">
       <SignUpModal isOpen={isModalOpen} onClose={closeModal} />
       <HamburgerMenu isOpenBurger={isOpen} onCloseBurger={closeBurger} />
       <SellModal opening={opening} onClose={() => setOpening(false)} />
@@ -69,7 +69,7 @@ function Navbar() {
         onClick={openBurger}
         className="flex lg:hidden order-last"
       >
-        <Image width={45} height={45} alt="hamburger menu icon" src="/hamburger.svg" />
+        <Image width={45} height={45} alt="hamburger menu icon" src="/hamburger.svg" className="w-[35px] sm:w-[45px] h-[35px] sm:h-[35px]" />
       </button>
       <button
         type="button"

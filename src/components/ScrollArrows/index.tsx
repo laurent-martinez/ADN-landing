@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 
 function ScrollArrows() {
-  const handleScroll = (amount) => {
+  const handleScroll = (amount: number) => {
     window.scrollBy({
       left: amount,
       behavior: 'smooth',

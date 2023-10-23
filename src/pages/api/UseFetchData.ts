@@ -1,7 +1,13 @@
 import axios from 'axios';
 import useSWR from 'swr';
 
+export interface ImageType {
+  id: number;
+  publicPath: string;
+}
 export interface Data {
+  minEstimation: number;
+  maxEstimation: number;
   sale: any;
   id: number;
   date: string;
@@ -9,7 +15,7 @@ export interface Data {
   designation: string;
   estimationMin: number;
   estimationMax: number;
-  images: null;
+  images: ImageType[];
 }
 export default function useFetchData() {
   const fetcher = (url : string) => axios.get(url).then((res) => res.data);

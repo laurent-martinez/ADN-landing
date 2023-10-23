@@ -25,7 +25,7 @@ const heroSections: HeroSection[] = [
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full">
         <Image src="/Group 9.png" width={1024} height={314} alt="macbooks pro" className="z-10 w-[512px] h-[157px] lg:w-full lg:h-full" />
-        <p className="absolute bottom-10 px-4 xl:px-0 tracking-[.25em] text-center font-poppins font-semibold lg:text-2xl text-[#FFFDD0] z-50">*N°1 des ventes aux enchères publiques de biens neufs et High-Tech en France*</p>
+        <p className="absolute bottom-10 px-4 xl:px-0 tracking-[.25em] text-center font-poppins font-semibold lg:text-2xl text-white z-50">*N°1 des ventes aux enchères publiques de biens neufs et High-Tech en France*</p>
         <Image src="/vector-wave.png" width={1440} height={252} className="z-1 w-full absolute bottom-0 opacity-70" alt="electric peugeot car" />
       </div>
     ),
@@ -35,7 +35,7 @@ const heroSections: HeroSection[] = [
     backgroundColor: '#173C6A',
     content: (
       <div className="flex items-center justify-center h-full w-full">
-        <h2 className="text-6xl text-[#FFFDD0] text-center font-normal">
+        <h2 className="text-6xl text-white text-center font-normal text-line">
           Maison de ventes aux enchères
         </h2>
       </div>
@@ -47,7 +47,7 @@ const heroSections: HeroSection[] = [
     content: (
       <div className="flex flex-col items-center h-full w-full">
         <Image src="/car-pic.png" className="z-10" width={545} height={29} alt="electric peugeot car" />
-        <p className="absolute bottom-10 tracking-[.25em] font-poppins font-semibold lg:text-2xl text-[#FFFDD0] z-50">*Retrouvez-nous au Mans ou en Live*</p>
+        <p className="absolute bottom-10 tracking-[.25em] font-poppins font-semibold lg:text-2xl text-white z-50">*Retrouvez-nous au Mans ou en Live*</p>
         <Image src="/vector-wave.png" width={1440} height={228.69} className="z-1 w-full absolute bottom-0 opacity-70" alt="electric peugeot car" />
       </div>
     ),
@@ -57,7 +57,7 @@ const heroSections: HeroSection[] = [
     backgroundColor: '#5EBB95',
     content: (
       <div className="flex items-center justify-center h-full w-full">
-        <h2 className="text-6xl text-[#FFFDD0] font-normal">Vendre vos objets...</h2>
+        <h2 className="text-6xl text-white font-normal text-line">Vendre vos objets...</h2>
       </div>
     ),
   },
@@ -67,7 +67,7 @@ const heroSections: HeroSection[] = [
     content: (
       <div className="flex flex-col items-center h-full w-full">
         <Image src="/Group 8.png" className="z-10" width={484} height={316} alt="electric peugeot car" />
-        <p className="absolute bottom-10 tracking-[.25em] font-poppins font-semibold lg:text-2xl text-[#FFFDD0] z-50">*La garantie d’une expertise de qualité de vos lots*</p>
+        <p className="absolute bottom-10 tracking-[.25em] font-poppins font-semibold lg:text-2xl text-white z-50">*La garantie d’une expertise de qualité de vos lots*</p>
         <Image src="/vector-waves.png" width={1442} height={269} className="z-1 lg:h-full lg:w-full absolute bottom-0 opacity-70" alt="electric peugeot car" />
       </div>
     ),
@@ -112,5 +112,4 @@ function Hero() {
     </div>
   );
 }
-
 export default Hero;
