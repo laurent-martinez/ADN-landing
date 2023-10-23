@@ -7,6 +7,7 @@ import Magazine from '@/components/Magazine';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import NewsLetter from '@/components/NewsLetter';
+// eslint-disable-next-line import/no-named-as-default
 import HamburgerMenu from '@/components/HamburgerMenu';
 
 function Dashboard() {
