@@ -5,9 +5,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 
-/* Appliquer la police Poppins aux éléments souhaités */
-body {
+/* Pour les titres */
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
+  /* Autres styles pour les titres */
+}
+
+/* Pour le texte principal */
+body {
+  font-family: 'Roboto', sans-serif;
+  /* Autres styles pour le texte principal */
 }
     .transform-glow {
       filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
@@ -80,7 +87,14 @@ body {
     .custom-scrollbar::-webkit-scrollbar {
       width: 100%;
     }
-
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+    
 
     /* Remove default scrollbar styles */
 .best-seller::-webkit-scrollbar {
@@ -90,6 +104,16 @@ body {
 .best-seller::-webkit-scrollbar-track {
   width: 10px;
   height: 10px;
+}
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 
@@ -109,4 +133,11 @@ body {
   top: 0;
   left: 0;
   right: 0;
+}
+/* Votre fichier CSS */
+
+@media (min-width: 600px) {
+  .arrow {
+    fill: #FF0000; /* Changer la couleur selon vos besoins */
+  }
 }

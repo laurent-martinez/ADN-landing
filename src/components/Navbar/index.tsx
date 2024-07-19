@@ -29,58 +29,49 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between items-center w-full h-[90px] z-10 px-6 text-[#123c6b]">
-      <SignUpModal isOpen={isModalOpen} onClose={closeModal} />
-      <HamburgerMenu isOpenBurger={isOpen} onCloseBurger={closeBurger} />
-      <SellModal opening={opening} onClose={() => setOpening(false)} />
-      <Link href="/" className="logo">
-        <Image alt="ADN brand logo" src="/logo_adn.svg" width={166} height={62} className="sm:w-[166px] sm:h-[62px] w-[103px] h-[51px]" />
-      </Link>
-      <div className="hidden lg:flex flex-row justify-center items-center space-x-6 font-poppins font-semibold">
-        <button
-          type="button"
-          className={`nav-link-anchor flex items-center gap-1 text-xl navnav-link relative z-10 ${router.pathname === '/Sell' ? 'active' : ''}`}
-          onClick={openSellModal}
-        >
-          <Image src="/money.svg" width={24} height={24} alt="money icon" className="text-[#5EBB95]" />
-          <p>Vendre</p>
-          {router.pathname === '/Sell' && <span className="bulb" />}
-        </button>
+    <nav className="container px-4 sm:px-0 mx-auto  h-[90px] z-10">
+      <div className="flex justify-between items-center h-full">
+        <SignUpModal isOpen={isModalOpen} onClose={closeModal} />
+        <HamburgerMenu isOpenBurger={isOpen} onCloseBurger={closeBurger} />
+        <SellModal opening={opening} onClose={() => setOpening(false)} />
+        
+        <Link href="/" className="logo">
+          <Image alt="ADN brand logo" src="/logo_adn.svg" width={166} height={62} className="sm:w-[166px] sm:h-[62px] w-[103px] h-[51px]" />
+        </Link>
+        
+        <div className="hidden lg:flex flex-row justify-end items-center space-x-6 font-poppins font-semibold flex-grow">
+          <Link
+            href="https://adn-encheres-live.fr/vendre-vos-biens-avec-adn-encheres-commissaires-priseurs-au-mans-et-en-live/"
+            className='nav-link-anchor flex items-center gap-1 text-xl navnav-link relative z-10'
+          >
+            <p>Vendre</p>
+          </Link>
+          <Link
+            href="https://espace-client.adn-encheres-live.fr/fr/connexion"
+            className='nav-link-anchor flex gap-1 text-xl nav-link relative z-10'
+          >
+            <p>Mon Espace Adjudicataire</p>
+          </Link>
+        </div>
+        
         <Link
           href="/"
           aria-label="shortcut to home"
-          className="nav-link relative z-10 nav-link-anchor"
+          className="nav-link relative z-10 nav-link-anchor hidden lg:block"
         >
-          <div className={`border-2  hover:border-[#85d0b1]  rounded-full p-2 ${router.pathname === '/' ? 'border-primaryColor' : 'border-transparent'}`}>
+          <div className={`border-2 hover:border-[#85d0b1] rounded-full p-2 ${router.pathname === '/' ? 'border-primaryColor' : 'border-transparent'}`}>
             <Image src="/home.svg" width={24} height={24} alt="home icon" />
           </div>
         </Link>
-        <Link
-          href="/Contact"
-          className={`nav-link-anchor flex gap-1 text-xl nav-link relative z-10 ${router.pathname === '/Contact' ? 'active' : ''}`}
+        
+        <button
+          type="button"
+          onClick={openBurger}
+          className="flex lg:hidden"
         >
-          <p>Contact</p>
-          <Image src="/infoContact.svg" width={18} height={18} alt="info icon" />
-          {router.pathname === '/Contact' && <span className="bulb" />}
-        </Link>
+          <Image width={45} height={45} alt="hamburger menu icon" src="/hamburger.svg" className="w-[35px] sm:w-[45px] h-[35px] sm:h-[35px]" />
+        </button>
       </div>
-      <button
-        type="button"
-        onClick={openBurger}
-        className="flex lg:hidden order-last"
-      >
-        <Image width={45} height={45} alt="hamburger menu icon" src="/hamburger.svg" className="w-[35px] sm:w-[45px] h-[35px] sm:h-[35px]" />
-      </button>
-      <button
-        type="button"
-        className={` nav-link-anchor  sign flex items-center justify-center font-poppins font-semibold mr-4 cursor-pointer group ${router.pathname === '/SignUp' ? 'active' : ''}`}
-        onClick={openModal}
-      >
-        <Image alt="user icon" src="/sign.svg" width={41.67} height={41.67} className="group-hover:animate-pulse w-[36px] h-[36px] hidden sm:flex" />
-        <p className="ml-2 group-hover:text-[#5EBB95] text-xl ease-linear duration-300 hidden md:flex">
-          S&apos;identifier
-        </p>
-      </button>
     </nav>
   );
 }

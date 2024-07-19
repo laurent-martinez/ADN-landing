@@ -11,7 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
-        montserrat: ['Montserrat', 'sans-serif'],
+        cormo: ['Cormorant Garamond', 'serif'],
       },
       screens: {
         'xs': '475px'
@@ -27,5 +27,7 @@ module.exports = {
       }),
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }

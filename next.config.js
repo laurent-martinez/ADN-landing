@@ -4,13 +4,17 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [`${process.env.NEXT_PUBLIC_URL}`,`https://${process.env.NEXT_PUBLIC_URL}`],
+    domains: ['auctionis.fr','https://auctionis.fr'],
   },
   rewrites() {
     return [
       {
         source: '/api/:path*',
-        destination: `https://${process.env.NEXT_PUBLIC_URL}/api/:path*`, // URL réelle de votre API
+        destination: `${process.env.NEXT_PUBLIC_API_BASE_URL}/:path*`, // Utilisez la variable d'environnement ici
+      },
+      {
+        source: '/api/proxy/:path*',
+        destination: '/api/proxy/:path*', // Ceci empêche le rewrite pour la route proxy
       },
     ];
   },

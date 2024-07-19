@@ -3,8 +3,8 @@ import React from 'react';
 
 function NewsLetter() {
   return (
-    <div className="xl:h-[550px] h-[350px] w-full ">
-      <div className="w-full h-full  sign-up-container flex flex-col md:flex-row relative">
+    <div className="xl:h-[550px] h-[350px] w-full my-12 container mx-auto rounded-lg">
+      <div className="w-full h-full  sign-up-container flex flex-col md:flex-row relative rounded-lg">
         <div className="lg:w-4/12 frame-registration w-full h-full flex-col items-center justify-center  bg-secondaryColor z-150 hidden xl:flex">
           <Image src="/news-image.png" width={627} height={797} alt="newsletter image" className="w-full h-full " />
         </div>
@@ -13,8 +13,8 @@ function NewsLetter() {
           <div className="absolute inset-0 pointer-events-none flex" style={{ backgroundImage: 'url(\'/noise-light.png\')' }} />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <div className="flex mb-9 justify-center items-center gap-2">
-              <h3 className="text-center font-extrabold  md:text-5xl sm:text-4xl xs-text-3xl text-2xl text-white">Recevez</h3>
-              <h4 className=" text-center font-poppins font-extrabold  md:text-5xl sm:text-4xl xs-text-3xl text-2xl text-white ">
+              <h3 className="text-center font-extrabold  md:text-5xl sm:text-4xl xs-text-3xl text-2xl text-white font-cormo">Recevez</h3>
+              <h4 className=" text-center font-cormo font-extrabold  md:text-5xl sm:text-4xl xs-text-3xl text-2xl text-white ">
                 notre
                 <span className="text-primaryColor ml-2">newsletter</span>
               </h4>
