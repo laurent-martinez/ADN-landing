@@ -4,7 +4,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['auctionis.fr','https://auctionis.fr'],
+    domains: [process.env.NEXT_PUBLIC_API_URL,`https://${process.env.NEXT_PUBLIC_API_URL}`],
   },
   rewrites() {
     return [
